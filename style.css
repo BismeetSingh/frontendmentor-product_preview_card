@@ -14,7 +14,8 @@ main {
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    
+   
+
    
     
 }
@@ -61,7 +62,6 @@ button{
 
 .price {
     display: inline-flex;
-    
     padding-left: 1rem;
 }
 
@@ -70,11 +70,12 @@ button{
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
     padding-left: 1rem;
+    font-weight: bold;
 }
 
 #strikeprice {
     text-decoration: line-through;
-    font-size: 1rem;
+    font-size: 2rem;
     padding-left: 1rem;
 }
 

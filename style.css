@@ -76,7 +76,8 @@ button{
 #strikeprice {
     text-decoration: line-through;
     font-size: 2rem;
-    padding-left: 1rem;
+    padding-left: 4rem;
+    font-family: 'Fraunces', serif;
 }
 
 #description {

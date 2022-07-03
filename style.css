@@ -9,14 +9,13 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    
 }
 
 #container {
     display: inline-flex;
     flex-wrap: wrap;
-    max-height: 50%;
     justify-content: center;
+    background-color: hsl(0, 0%, 100%);
 
     
 }
@@ -24,7 +23,6 @@ main {
 #content {
     display: flex;
     flex-direction: column;
-    background-color: hsl(0, 0%, 100%);
     padding: 1rem;
 }
 
@@ -100,4 +98,6 @@ button:hover{
     background-color: hsl(158, 36%, 37%);
 }
 
-
+picture,picture > img {
+    height: 30rem;
+}

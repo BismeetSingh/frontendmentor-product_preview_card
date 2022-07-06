@@ -1,107 +1,158 @@
-html{
-    box-sizing: border-box;
-    background-color: hsl(30, 38%, 92%);
+html {
+  box-sizing: border-box;
+  background-color: hsl(30, 38%, 92%);
 }
 
+body,
+h1,
+p {
+  margin: 0;
+}
+
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.4rem;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+.actual {
+  font-family: Fraunces, serif;
+  font-size: 2.5em;
+}
+
+.type,
+p,
+.original {
+  color: hsl(228, 12%, 48%);
+}
+
+.type {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.actual {
+  color: hsl(158, 36%, 37%);
+}
+
+.original {
+  text-decoration: line-through;
+}
 
 main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 5vh auto;
+  width: 90%;
+  min-height: 90vh;
+  flex: 1;
+}
+
+@media screen and (min-width: 687px) {
+  .card {
+    flex-direction: row;
+    min-height: auto;
+    max-width: 56rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .card {
+    max-height: 56rem;
+    max-width: 75rem;
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.description > * {
+  margin: 1rem 0;
+}
+
+.description {
+    flex: 0 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-#container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: hsl(0, 0%, 100%);
-
-    
-}
-
-#content {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-}
-
-button{
-    background-color: hsl(158, 84%, 32%);
-    padding: 0.8rem;
-    border-radius: 0.5rem;
-    color: hsl(0, 0%, 100%);
-    width: 50%;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-.header {
-    font-family: 'Fraunces', serif;
-    font-size: 2rem;
-    padding-left: 3rem;
-
-}
-
-#perfume {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    padding-left: 3rem;
-    text-transform: uppercase;
-
-    
-}
-
-.price {
-    display: inline-flex;
-    padding-left: 3rem;
-    
-}
-
-#currentprice {
-    color: hsl(158, 36%, 37%);
-    font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 3rem;
-    font-weight: bold;
-}
-
-#strikeprice {
-    text-decoration: line-through;
-    font-size: 2rem;
-    padding-left: 2rem;
-    font-family: 'Fraunces', serif;
-}
-
-#description {
-    color: hsl(228, 12%, 48%);
-    font-size: 1.5rem;
-    flex-wrap: wrap;
-    padding-right: 1rem;
-    padding-left: 3rem;
+    flex-flow: column;
     justify-content: space-between;
-}
-
-
-#cart-icon {
-    margin-right: 0.8rem;
-}
-
-@media only screen and (max-width:  687px) {
-    #product-img {
-      width: 100%;
-    }
-    .content {
-        padding-left: 10rem;
-    }
-
   }
 
-button:hover{
-    background-color: hsl(158, 36%, 37%);
+.content {
+  padding: 3rem 2rem;
 }
 
-picture,picture > img {
-    height: 30rem;
+.prices {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
+
+.actual {
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 2000px) {
+  .content {
+    justify-content: flex-end;
+  }
+  .prices {
+    flex: 0;
+    align-self: flex-end;
+  }
+}
+
+.card a::before {
+  content: url(images/icon-cart.svg);
+  padding: 1.4rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.card a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: hsl(158, 36%, 37%);
+  padding: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.card a:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+
+
+@media screen and (min-width: 687px) {
+  .card picture {
+    width: 50%;
+  }
+  .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+
